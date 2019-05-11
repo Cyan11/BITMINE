@@ -17,6 +17,7 @@ public class RenderBoard : MonoBehaviour {
 		time = Time.time;
 	}
 
+
 	void Update() {
 		if (Time.time - time > 0.5f) {
 			x += dir;
