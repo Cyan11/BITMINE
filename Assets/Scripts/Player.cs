@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour{
  public PlayerData data;
- public BoardData data; 
+ public Grid grid;
  new Renderer renderer;
 
  void Awake() {
@@ -13,7 +13,8 @@ public class Player : MonoBehaviour{
      renderer.material.color = GetColorFromType(data.cellType);
      }
 void Update() {
-    transform.position = boardData.grid.GetCellCenterLocal((Vector3Int)data.position);
+  
+  transform.localPosition = grid.GetCellCenterLocal((Vector3Int)data.position);
 }
 
     public static Color GetColorFromType(Board.Cell cellType) {
