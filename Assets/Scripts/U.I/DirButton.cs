@@ -5,7 +5,7 @@ public class DirButton : MonoBehaviour
     Up = 0, Right = 1, Down = 2, Left = 3
 }
   static readonly float[] DirectionAngles = new float[]{
-      -180, -270, -0, -90
+      180, 270, 0, 90
   };
   
   public Direction direction = Direction.Up;
