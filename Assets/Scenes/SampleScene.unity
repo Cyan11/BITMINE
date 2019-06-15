@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 671310911}
   - component: {fileID: 671310910}
   m_Layer: 5
-  m_Name: Arrow
+  m_Name: Arrow 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,6 +577,7 @@ GameObject:
   - component: {fileID: 948756878}
   - component: {fileID: 948756880}
   - component: {fileID: 948756879}
+  - component: {fileID: 948756881}
   m_Layer: 5
   m_Name: Ficha
   m_TagString: Untagged
@@ -643,6 +644,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948756877}
   m_CullTransparentMesh: 0
+--- !u!114 &948756881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948756877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1ac20fc164f0c4289723d085c90cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction1: {fileID: 671310910}
+  direction2: {fileID: 1734793367}
+  direction3: {fileID: 1564521677}
+  players:
+  - {fileID: 1464295291}
+  - {fileID: 909287996}
+  - {fileID: 1909943288}
+  - {fileID: 1816780608}
 --- !u!1 &1104724411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1186,7 @@ GameObject:
   - component: {fileID: 1564521678}
   - component: {fileID: 1564521677}
   m_Layer: 5
-  m_Name: Arrow 2
+  m_Name: Arrow 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1467,7 +1488,7 @@ GameObject:
   - component: {fileID: 1734793368}
   - component: {fileID: 1734793367}
   m_Layer: 5
-  m_Name: Arrow 1
+  m_Name: Arrow 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,7 +1778,7 @@ GameObject:
   - component: {fileID: 2103276703}
   - component: {fileID: 2103276702}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Execute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1780,7 +1801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -225.09998, y: 94.399994}
+  m_AnchoredPosition: {x: -225.09961, y: 94.3999}
   m_SizeDelta: {x: 377.19995, y: 115.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103276702
@@ -1822,7 +1843,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1104724413}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 948756881}
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2103276703

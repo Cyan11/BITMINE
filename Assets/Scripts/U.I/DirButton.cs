@@ -2,7 +2,7 @@
 
 public class DirButton : MonoBehaviour
 {  public enum Direction {
-    Up = 0, Right = 1, Down = 2, Left = 3
+    Up = 3, Right = 2, Down = 1, Left = 0
 }
   static readonly float[] DirectionAngles = new float[]{
       180, 270, 0, 90
@@ -23,11 +23,11 @@ public class DirButton : MonoBehaviour
     rot.z = DirectionAngles[(int)direction];
     transform.localRotation = Quaternion.Euler(rot);
   }
-  /* 
-  public Direction getDirection() => direction;
+  
+  public Direction GetDirection() => direction;
   public void SetDirection(Direction dir) {
       direction = dir;
       ApplyDirection();
   }
-  */
+  
 }

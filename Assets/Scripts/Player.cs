@@ -17,6 +17,18 @@ void FixedUpdate() {
     transform.localPosition = Vector3.Lerp( transform.localPosition, newPos, 0.1f);
 
 }
+public void Up() {
+   => data.position.y =+ 1;
+}
+public void Down() {
+   => data.position.y -= 1;
+}
+public void Left() {
+   => data.position.x -= 1;
+}
+public void Right() {
+   => data.position.x += 1;
+}
 
     public static Color GetColorFromType(Board.Cell cellType) {
         switch(cellType) {
