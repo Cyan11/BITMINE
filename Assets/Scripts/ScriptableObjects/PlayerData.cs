@@ -4,8 +4,10 @@
 public class PlayerData : ScriptableObject
 {
    public Board.Cell cellType;
+   public Vector2Int startPosition;
    public Vector2Int position;
    public int heldBitcoins, baseBitcoins;
    public string playerName;
-   //Player functions later
+   //Player functions later or not
+
 }

@@ -7,7 +7,9 @@ public class Player : MonoBehaviour{
  new Renderer renderer;
 
  void Awake() {
-     renderer = GetComponentInChildren<MeshRenderer>();
+      data.position = data.startPosition;
+      renderer = GetComponentInChildren<MeshRenderer>();
+     
  }
  void Start() {
      renderer.material.color = GetColorFromType(data.cellType);
@@ -17,18 +19,18 @@ void FixedUpdate() {
     transform.localPosition = Vector3.Lerp( transform.localPosition, newPos, 0.1f);
 
 }
-public void Up() {
-   => data.position.y =+ 1;
-}
-public void Down() {
-   => data.position.y -= 1;
-}
-public void Left() {
-   => data.position.x -= 1;
-}
-public void Right() {
-   => data.position.x += 1;
-}
+public void Up() 
+   => data.position.y = Mathf.Clamp(data.position.y - 1, -3, 3);
+
+public void Down() 
+   => data.position.y = Mathf.Clamp(data.position.y + 1, -3, 3);
+
+public void Left() 
+   => data.position.x = Mathf.Clamp(data.position.x - 1, -3, 3);
+
+public void Right() 
+   => data.position.x = Mathf.Clamp(data.position.x + 1, -3, 3);
+
 
     public static Color GetColorFromType(Board.Cell cellType) {
         switch(cellType) {
