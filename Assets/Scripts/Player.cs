@@ -5,6 +5,7 @@ public class Player : MonoBehaviour{
  public PlayerData data;
  public Grid grid;
  new Renderer renderer;
+ public bool GameMode;
 
  void Awake() {
       data.position = data.startPosition;
