@@ -1,4 +1,5 @@
 ﻿using UnityEngine; 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class PlayerControl : MonoBehaviour
    public List<Player> players;
    public Graphic sheetGraphic;
    public static int currentPlayer = 0;
+   public float moveDelay = 0.5f;
    
    public Color[] SheetColors = {
       Color.blue, Color.red, Color.magenta, Color.yellow
@@ -15,11 +17,27 @@ public class PlayerControl : MonoBehaviour
    void Awake() {UpdateSheetColor();}
 
    public void Execute() {
+      StartCoroutine(SlowExecute());
+   }
+
+   IEnumerator SlowExecute() {
     var player = players[currentPlayer];
+
     CallDirection(player, direction1.GetDirection());
+      if (direction1.GetDirection() != direction2.GetDirection()){
+         yield return new WaitForSeconds(moveDelay);}
+
     CallDirection(player, direction2.GetDirection());
+      if (direction2.GetDirection() != direction3.GetDirection()){
+         yield return new WaitForSeconds(moveDelay);}
+         
     CallDirection(player, direction3.GetDirection());
+         yield return new WaitForSeconds(moveDelay);
     
+    NextPlayer();
+   }
+
+   void NextPlayer() {
     currentPlayer = (currentPlayer + 1) % 4;
     UpdateSheetColor();
    }
