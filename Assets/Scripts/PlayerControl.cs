@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
    public Graphic sheetGraphic;
    public static int currentPlayer = 0;
    public float moveDelay = 0.5f;
+   public GameObject executeButton;
    
    public Color[] SheetColors = {
       Color.blue, Color.red, Color.magenta, Color.yellow
@@ -21,6 +22,7 @@ public class PlayerControl : MonoBehaviour
    }
 
    IEnumerator SlowExecute() {
+    executeButton.SetActive(false);
     var player = players[currentPlayer];
 
     CallDirection(player, direction1.GetDirection());
@@ -34,7 +36,9 @@ public class PlayerControl : MonoBehaviour
     CallDirection(player, direction3.GetDirection());
          yield return new WaitForSeconds(moveDelay);
     
+    
     NextPlayer();
+    executeButton.SetActive(true);
    }
 
    void NextPlayer() {
