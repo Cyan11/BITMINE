@@ -26,6 +26,7 @@ public class PlayerControl : MonoBehaviour
     var player = players[currentPlayer];
 
     CallDirection(player, direction1.GetDirection());
+    
       if (direction1.GetDirection() != direction2.GetDirection()){
          yield return new WaitForSeconds(moveDelay);}
 
