@@ -9,6 +9,7 @@ public class Player : MonoBehaviour{
 
  void Awake() {
       data.position = data.startPosition;
+           data.baseBitcoins = 0;
       renderer = GetComponentInChildren<MeshRenderer>();
      
  }

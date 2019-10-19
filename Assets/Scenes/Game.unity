@@ -700,6 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779733453}
   - component: {fileID: 779733454}
+  - component: {fileID: 779733455}
   m_Layer: 5
   m_Name: Purple
   m_TagString: Untagged
@@ -751,6 +752,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &779733455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779733452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9428faaa010db9f499de8558030c2e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 865c58803b91ed140b9e203deaed9b9c, type: 2}
+  heldScore: {fileID: 679309694}
+  baseScore: {fileID: 1582352986}
 --- !u!1001 &815727633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -792,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 32ff8655aac6a4e41856e8a71ce9702c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 32ff8655aac6a4e41856e8a71ce9702c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1214,6 +1230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1019440304}
   - component: {fileID: 1019440305}
+  - component: {fileID: 1019440306}
   m_Layer: 5
   m_Name: Yellow
   m_TagString: Untagged
@@ -1265,6 +1282,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &1019440306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019440303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9428faaa010db9f499de8558030c2e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: b479a424c58f6f74586246f3fde3bc0c, type: 2}
+  heldScore: {fileID: 413239084}
+  baseScore: {fileID: 1728712879}
 --- !u!1 &1104724411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,6 +1652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360969140}
   - component: {fileID: 1360969141}
+  - component: {fileID: 1360969142}
   m_Layer: 5
   m_Name: Red
   m_TagString: Untagged
@@ -1671,6 +1704,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &1360969142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360969139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9428faaa010db9f499de8558030c2e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: b8a85d7397fb0984c8d758f9c1991b5d, type: 2}
+  heldScore: {fileID: 1468446045}
+  baseScore: {fileID: 2034289191}
 --- !u!1001 &1434205589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2211,7 +2259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 32ff8655aac6a4e41856e8a71ce9702c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 32ff8655aac6a4e41856e8a71ce9702c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2609,7 +2657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.9, y: -330.43}
+  m_AnchoredPosition: {x: -53.90039, y: -330.43018}
   m_SizeDelta: {x: 713.8, y: 442.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737996728
@@ -2674,6 +2722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740445908}
   - component: {fileID: 1740445909}
+  - component: {fileID: 1740445910}
   m_Layer: 5
   m_Name: Blue
   m_TagString: Untagged
@@ -2725,6 +2774,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &1740445910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740445907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9428faaa010db9f499de8558030c2e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: ef5ecb259d695bf458392c209b2289eb, type: 2}
+  heldScore: {fileID: 71175981}
+  baseScore: {fileID: 1815159729}
 --- !u!1 &1815159726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,8 +3030,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1611695779}
-  - {fileID: 1464295290}
   - {fileID: 909287997}
+  - {fileID: 1464295290}
   - {fileID: 1909943289}
   - {fileID: 1816780609}
   m_Father: {fileID: 0}

@@ -15,7 +15,9 @@ public class PlayerControl : MonoBehaviour
    public Color[] SheetColors = {
       Color.blue, Color.red, Color.magenta, Color.yellow
    };
-   void Awake() {UpdateSheetColor();}
+   void Awake() {UpdateSheetColor();
+   
+   }
 
    public void Execute() {
       StartCoroutine(SlowExecute());
@@ -36,6 +38,8 @@ public class PlayerControl : MonoBehaviour
          
     CallDirection(player, direction3.GetDirection());
          yield return new WaitForSeconds(moveDelay);
+    
+    ++player.data.baseBitcoins;
     
     
     NextPlayer();
