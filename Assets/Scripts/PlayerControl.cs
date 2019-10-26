@@ -23,27 +23,32 @@ public class PlayerControl : MonoBehaviour
       StartCoroutine(SlowExecute());
    }
 
+
    IEnumerator SlowExecute() {
     executeButton.SetActive(false);
     var player = players[currentPlayer];
 
-    CallDirection(player, direction1.GetDirection());
-    
-      if (direction1.GetDirection() != direction2.GetDirection()){
-         yield return new WaitForSeconds(moveDelay);}
-
-    CallDirection(player, direction2.GetDirection());
-      if (direction2.GetDirection() != direction3.GetDirection()){
-         yield return new WaitForSeconds(moveDelay);}
-         
-    CallDirection(player, direction3.GetDirection());
-         yield return new WaitForSeconds(moveDelay);
-    
-    ++player.data.baseBitcoins;
-    
+   yield return PlayerAction(player, direction1);
+   yield return PlayerAction(player, direction2);
+   yield return PlayerAction(player, direction3);
     
     NextPlayer();
     executeButton.SetActive(true);
+   }
+
+      IEnumerator PlayerAction(Player player, DirButton direction) {
+      CallDirection(player, direction.GetDirection());
+      if(
+         player.data.position == Vector2Int.zero &&
+         player.data.heldBitcoins < 3
+      ){
+         ++player.data.heldBitcoins;
+      }
+      if(player.data.position == player.data.startPosition){
+         player.data.heldBitcoins =+ player.data.baseBitcoins;
+         player.data.heldBitcoins = 0;
+      }
+      yield return new  WaitForSeconds(moveDelay);
    }
 
    void NextPlayer() {
@@ -72,3 +77,6 @@ public class PlayerControl : MonoBehaviour
      sheetGraphic.color = SheetColors[currentPlayer];
   }
 }
+
+
+ 
