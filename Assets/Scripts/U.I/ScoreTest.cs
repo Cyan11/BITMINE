@@ -8,6 +8,6 @@ public class ScoreTest : MonoBehaviour
     void FixedUpdate(){
         baseScore.text = "  " + playerData.baseBitcoins.ToString();
         heldScore.text = "  " + playerData.heldBitcoins.ToString();
-        
+
     }
 }

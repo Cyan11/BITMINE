@@ -13,11 +13,9 @@ public class PlayerControl : MonoBehaviour
    public GameObject executeButton;
    
    public Color[] SheetColors = {
-      Color.blue, Color.red, Color.magenta, Color.yellow
+      Color.blue, Color.magenta, Color.red, Color.yellow
    };
-   void Awake() {UpdateSheetColor();
-   
-   }
+   void Awake() {UpdateSheetColor();}
 
    public void Execute() {
       StartCoroutine(SlowExecute());
@@ -37,17 +35,24 @@ public class PlayerControl : MonoBehaviour
    }
 
       IEnumerator PlayerAction(Player player, DirButton direction) {
-      CallDirection(player, direction.GetDirection());
-      if(
-         player.data.position == Vector2Int.zero &&
-         player.data.heldBitcoins < 3
-      ){
-         ++player.data.heldBitcoins;
+      
+       var pos = player.data.position;
+       CallDirection(player, direction.GetDirection());
+      if (player.data.position == Vector2Int.zero) {
+         if(player.data.heldBitcoins < 3)
+         {
+            ++player.data.heldBitcoins;
+
+         } 
+        
+           player.data.position = pos;
       }
+ 
       if(player.data.position == player.data.startPosition){
-         player.data.heldBitcoins =+ player.data.baseBitcoins;
+         player.data.baseBitcoins += player.data.heldBitcoins;
          player.data.heldBitcoins = 0;
       }
+      
       yield return new  WaitForSeconds(moveDelay);
    }
 
@@ -57,6 +62,7 @@ public class PlayerControl : MonoBehaviour
    }
 
    void CallDirection(Player player, DirButton.Direction dir) {
+      var pos = player.data.position;
       switch(dir) {
          case DirButton.Direction.Up:
            player.Up();
@@ -70,7 +76,15 @@ public class PlayerControl : MonoBehaviour
          case DirButton.Direction.Right:
             player.Right();
             break;
+             if (player.data.position == Vector2Int.zero) {
+         if(player.data.heldBitcoins < 3)
+         {
+            ++player.data.heldBitcoins;
+
+         }   player.data.position = pos;
       }
+      }
+      
               
    }
   void UpdateSheetColor() {
