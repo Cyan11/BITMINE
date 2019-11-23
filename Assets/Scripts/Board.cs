@@ -58,6 +58,8 @@ public class Board : MonoBehaviour {
 		board[x1][y1] = Cell.None;
 		return true;
 	}
+    public Cell CellGet(Vector2Int pos) => GetCell(pos.x, pos.y);
+
 
 	public bool AddCell(int x, int y, Cell type) {
 		// Verificar se a posição da nova célula está dentro do tabuleiro.
@@ -71,4 +73,5 @@ public class Board : MonoBehaviour {
 		board[x][y] = type;
 		return true;
 	}
+	
 }

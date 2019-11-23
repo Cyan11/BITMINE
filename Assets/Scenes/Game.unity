@@ -769,8 +769,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 865c58803b91ed140b9e203deaed9b9c, type: 2}
-  heldScore: {fileID: 679309694}
-  baseScore: {fileID: 1582352986}
+  heldScore: {fileID: 1582352986}
+  baseScore: {fileID: 679309694}
 --- !u!1001 &815727633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1299,8 +1299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: b479a424c58f6f74586246f3fde3bc0c, type: 2}
-  heldScore: {fileID: 413239084}
-  baseScore: {fileID: 1728712879}
+  heldScore: {fileID: 1728712879}
+  baseScore: {fileID: 413239084}
 --- !u!1 &1104724411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,8 +1721,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: b8a85d7397fb0984c8d758f9c1991b5d, type: 2}
-  heldScore: {fileID: 2034289191}
-  baseScore: {fileID: 1468446045}
+  heldScore: {fileID: 1468446045}
+  baseScore: {fileID: 2034289191}
 --- !u!1001 &1434205589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2791,8 +2791,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: ef5ecb259d695bf458392c209b2289eb, type: 2}
-  heldScore: {fileID: 71175981}
-  baseScore: {fileID: 1815159729}
+  heldScore: {fileID: 1815159729}
+  baseScore: {fileID: 71175981}
 --- !u!1 &1815159726
 GameObject:
   m_ObjectHideFlags: 0

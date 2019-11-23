@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour
    public static int currentPlayer = 0;
    public float moveDelay = 0.5f;
    public GameObject executeButton;
+   public Board board;
    
    public Color[] SheetColors = {
       Color.blue, Color.magenta, Color.red, Color.yellow
@@ -35,8 +36,11 @@ public class PlayerControl : MonoBehaviour
    }
 
       IEnumerator PlayerAction(Player player, DirButton direction) {
-      
-       var pos = player.data.position;
+       
+       var cell = board.CellGet(player.data.position);
+       var other = GetPlayerAtCell(cell);
+
+       if((cell & Board.Cell.AnyPlayer ) != 0)
        CallDirection(player, direction.GetDirection());
       if (player.data.position == Vector2Int.zero) {
          if(player.data.heldBitcoins < 3)
@@ -47,6 +51,7 @@ public class PlayerControl : MonoBehaviour
         
            player.data.position = pos;
       }
+      
  
       if(player.data.position == player.data.startPosition){
          player.data.baseBitcoins += player.data.heldBitcoins;
@@ -89,6 +94,21 @@ public class PlayerControl : MonoBehaviour
    }
   void UpdateSheetColor() {
      sheetGraphic.color = SheetColors[currentPlayer];
+  }
+  public GetPlayerAtCell(Board.Cell cell){
+     switch(cell) {
+        case Board.Cell.PlayerRed;
+         return players[0]
+        case Board.Cell.PlayerPurple;
+         return players[1]
+        case Board.Cell.Player
+     }
+  }
+  void Steal(Player player, Board.Cell otherCell){
+     if(player.data.heldBitcoins < 3 && other.data.heldBitcoins > 0){
+        --other.data.heldBitcoins;
+        ++player.data.heldBitcoins;
+     }
   }
 }
 
