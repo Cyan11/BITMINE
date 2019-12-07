@@ -32,10 +32,11 @@ public class Board : MonoBehaviour {
 	}
 
 	public Cell GetCell(int x, int y) {
-		return board[x][y];
+		
+		return board[x + 3][y + 3];
 	}
 	public void SetCell(int x, int y, Cell type) {
-		board[x][y] = type;
+		board[x+3][y+3] = type;
 	}
 
 	public bool MoveCell(int x1, int y1, int x2, int y2) {
@@ -58,7 +59,7 @@ public class Board : MonoBehaviour {
 		board[x1][y1] = Cell.None;
 		return true;
 	}
-    public Cell CellGet(Vector2Int pos) => GetCell(pos.x, pos.y);
+    public Cell GetCell(Vector2Int pos) => GetCell(pos.x, pos.y);
 
 
 	public bool AddCell(int x, int y, Cell type) {
@@ -75,3 +76,5 @@ public class Board : MonoBehaviour {
 	}
 	
 }
+
+
